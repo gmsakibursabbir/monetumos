@@ -63,22 +63,49 @@
                     <img src="./images/hamburger.png" alt="Menu Icon">
                 </button>
                 <!-- Desktop Menu Items (Visible on large screens) -->
-                <ul class="hidden lg:flex lg:space-x-4 2xl:space-x-7">
+                <ul class="hidden lg:flex items-center gap-9">
+                    <!-- ...existing code... -->
+                    <li class="dropdown relative flex flex-col items-center">
+                        <button
+                            class="dropdown-toggle flex gap-2 items-center text-[#FCFEFD] font-medium text-sm xl:text-base  hover:text-[#00E980] capitalize tracking-[.50px] py-3 aria-expanded:text-[#00E980]"
+                            aria-expanded="false" aria-controls="features-dropdown" type="button">
+                            Features
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none"
+                                class="mt-1" stroke="currentColor">
+                                <path d="M1.5 0.75L6 5.25L10.5 0.75" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div id="features-dropdown"
+                            class="dropDownItem min-w-[180px] bg-[#243C53] rounded-lg shadow-lg absolute left-0 top-full mt-2 z-10 hidden">
+                            <ul class="py-2">
+                                <li><a href="#"
+                                        class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                                        1</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                                        2</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                                        3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- ...existing code... -->
                     <li><a href="#"
-                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px]">Features</a>
+                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Pricing</a>
                     </li>
                     <li><a href="#"
-                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px]">Results</a>
+                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Results</a>
                     </li>
+
                     <li><a href="#"
-                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px]">Pricing</a>
+                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Agency</a>
                     </li>
-                    <li><a href="#"
-                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px]">Agency</a>
-                    </li>
-                    <li><a href="#"
-                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px]">Affiliate</a>
-                    </li>
+
                 </ul>
             </div>
             <!-- Sign Up Button -->
@@ -660,7 +687,7 @@
                                     anytime</span>
                             </div>
                         </div>
-                        
+
                     </div>
                     <!-- bottom -->
                     <div class="block md:hidden">
@@ -822,6 +849,32 @@
 
 
     <!-- Script  -->
+    <script>
+        // Dropdown toggler for Features menu
+        document.querySelectorAll('.dropdown-toggle').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const dropdown = btn.parentElement.querySelector('.dropDownItem');
+                const isOpen = dropdown.classList.contains('block');
+                // Close all dropdowns first
+                document.querySelectorAll('.dropDownItem').forEach(function (d) {
+                    d.classList.add('hidden');
+                    d.classList.remove('block');
+                });
+                // Toggle current dropdown
+                if (!isOpen) {
+                    dropdown.classList.remove('hidden');
+                    dropdown.classList.add('block');
+                    btn.setAttribute('aria-expanded', 'true');
+                } else {
+                    dropdown.classList.add('hidden');
+                    dropdown.classList.remove('block');
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+    </script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
