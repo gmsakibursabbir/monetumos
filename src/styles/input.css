@@ -125,3 +125,9 @@ body {
 .accordion-item.active button span {
   color: #fff;
 }
+
+.red-pins{
+background: linear-gradient(134.72deg, rgba(13, 179, 104, 0) 7.08%, rgba(255, 255, 255, 0.2) 91.67%), #DF1212;
+border: 1px solid rgba(13, 179, 104, 0.2);
+backdrop-filter: blur(12px);
+}
