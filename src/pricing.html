@@ -63,22 +63,49 @@
                     <img src="./images/hamburger.png" alt="Menu Icon">
                 </button>
                 <!-- Desktop Menu Items (Visible on large screens) -->
-                <ul class="hidden lg:flex lg:space-x-4 2xl:space-x-7">
+                <ul class="hidden lg:flex items-center gap-9">
+                    <!-- ...existing code... -->
+                    <li class="dropdown relative flex flex-col items-center">
+                        <button
+                            class="dropdown-toggle flex gap-2 items-center text-[#FCFEFD] font-medium text-sm xl:text-base  hover:text-[#00E980] capitalize tracking-[.50px] py-3 aria-expanded:text-[#00E980]"
+                            aria-expanded="false" aria-controls="features-dropdown" type="button">
+                            Features
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none"
+                                class="mt-1" stroke="currentColor">
+                                <path d="M1.5 0.75L6 5.25L10.5 0.75" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div id="features-dropdown"
+                            class="dropDownItem min-w-[180px] bg-[#243C53] rounded-lg shadow-lg absolute left-0 top-full mt-2 z-10 hidden">
+                            <ul class="py-2">
+                                <li><a href="#"
+                                        class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                                        1</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                                        2</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                                        3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- ...existing code... -->
                     <li><a href="#"
-                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px]">Features</a>
+                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Pricing</a>
                     </li>
                     <li><a href="#"
-                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px]">Results</a>
+                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Results</a>
                     </li>
+
                     <li><a href="#"
-                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px]">Pricing</a>
+                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Agency</a>
                     </li>
-                    <li><a href="#"
-                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px]">Agency</a>
-                    </li>
-                    <li><a href="#"
-                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px]">Affiliate</a>
-                    </li>
+
                 </ul>
             </div>
             <!-- Sign Up Button -->
@@ -149,22 +176,19 @@
             <div
                 class="px-5 xl:max-w-[1240px] 2xl:max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-0 items-center justify-between pt-[48px] pb-[24px] lg:pt-[80px] lg:pb-[48px]">
                 <div class="w-full lg:w-[958px] mx-auto text-center">
-                    <div class="text-center space-y-5 lg:space-y-4">
+                    <div class="text-center space-y-3 lg:space-y-4">
                         <h3
-                            class="inline-block px-2 py-[7px] lg:px-[10px] lg:py-[11px] bg-[rgba(55,228,121,0.18)] rounded-[4px] font-inter font-bold text-[14px] tracking-[1px] text-[#0DB368]">
+                            class="inline-block px-2 py-[7px] lg:px-[10px] lg:py-[11px] bg-[rgba(55,228,121,0.18)] rounded-[4px] font-inter font-bold text-[14px] tracking-[1px] text-[#0DB368] tracking-[1px] uppercase">
                             100% Transparent</h3>
                         <h1 class="text-[#FCFEFD] font-inter font-bold text-[28px] lg:text-[64px] leading-[110%] mt-4">
                             The Most Transparent Pricing <span class="text-[#0DB368]">in the AdTech Industry</span></h1>
                         <p
-                            class="w-full lg:block hidden lg:w-[794px] mx-auto text-[14px] lg:text-[18px] text-[#FCFEFD] font-inter font-normal leadind-[140%]">
+                            class="w-full lg:max-w-[794px] mx-auto text-[14px] lg:text-[18px] text-[#FCFEFD] font-inter font-normal leadind-[140%]">
                             <strong>No hidden costs. No upfront costs. No subscriptions. No commitment.</strong> You
                             never pay from your own pocket — we only take a share of the <span
                                 class="text-[#0DB368]">revenue we help generate for you.</span>
                         </p>
-                        <p
-                            class="w-full lg:hidden block lg:w-[740px] mx-auto text-[14px] lg:text-[18px] text-[#FCFEFD] font-inter font-normal leadind-[140%]">
-                            Earn recurring revenue by referring website
-                            publishers to Monetumo.</p>
+
                     </div>
                 </div>
             </div>
@@ -383,7 +407,8 @@
                     </div>
                 </div>
                 <!-- card item start  -->
-                <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 items-center max-w-[860px] mx-auto w-full px-5">
+                <div
+                    class="grid lg:grid-cols-3 grid-cols-1 gap-5 items-center max-w-[860px] mx-auto w-full px-5 lg:px-0">
                     <!-- single item 1  -->
                     <div
                         class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col items-center gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
@@ -417,7 +442,7 @@
                     </div>
                     <!-- single item 3  -->
                     <div
-                        class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col items-center gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+                        class="bg-[#F1F5F8] bg-opacity-5 p-5  lg:p-7 rounded-xl flex flex-col items-center gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
 
                         <div
                             class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-[60px] h-[60px] rounded-xl flex justify-center items-center">
@@ -432,18 +457,18 @@
                     </div>
                 </div>
                 <!-- price match -->
-                <div class="max-w-[860px] mx-auto w-full px-5 pt-6 lg:pt-[48px] block">
+                <div class="max-w-[860px] mx-auto w-full px-5 lg:px-0 pt-6 lg:pt-[48px] block">
                     <div
                         class="bg-[#0DB368] p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full ">
                         <div class="flex flex-col text-start">
                             <h3
-                                class="inline-block w-fit px-2 py-[7px] lg:px-[10px] lg:py-[11px] bg-[rgba(255,255,255,0.16)] border-[1px] border-[rgba(255,255,255,0.20)] rounded-[4px] font-inter font-bold text-[14px] tracking-[1px] text-[#ffffff]">
+                                class="inline-block w-fit px-2 py-[7px] lg:px-[10px] lg:py-[11px] bg-[rgba(255,255,255,0.16)] border-[1px] border-[rgba(255,255,255,0.20)] rounded-[4px] font-inter font-bold text-[14px] text-[#ffffff] tracking-[1px] uppercase">
                                 Best Price Promise</h3>
                             <h2
-                                class="text-[#ffffff] text-[28px] lg:text-[32px] font-roboto font-bold leading-[110%] mt-5 mb-2">
+                                class="text-[#ffffff] text-[28px] lg:text-[32px] font-roboto font-bold leading-[110%] mt-5 mb-2 max-w-[289px] md:max-w-full">
                                 We Always Price Match</h2>
                             <div
-                                class="text-[#F1F5F8] text-[14px] md:text-base font-normal font-inter leading-[140%] space-y-2">
+                                class="text-[#F1F5F8] text-[14px] md:text-base font-normal font-inter leading-[140%] space-y-2 max-w-[289px] md:max-w-full">
                                 <p class="">Found a better
                                     revenue share with another ad network? We'll match it.</p>
                                 <p class="">Our team continuously monitors market rates to ensure you always get the
@@ -522,11 +547,11 @@
         <!-- Why We Price  -->
         <section class="bg-[#132D46] py-12 lg:py-[100px]">
             <div class="mx-auto py-8 px-5 max-w-[1240px]">
-                <div class="px-5 xl:px-0 text-center space-y-3 lg:space-y-4">
-                    <h2 class="font-bold text-[28px] lg:text-[42px] text-[#FCFEFD] font-inter">Why We <span
-                            class="text-[#0DB368]">Price It</span> This Way</h2>
+                <div class="text-center space-y-4">
+                    <h2 class="font-bold text-[28px] lg:text-[42px] text-[#FCFEFD] md:font-inter">Why We <span
+                            class="text-[#FCFEFD] md:text-[#0DB368]">Price It</span> This Way</h2>
                     <div class="max-w-[794px] mx-auto block md:hidden">
-                        <p class="text-[16px] lg:text-[18px] text-[#FCFEFD] font-inter font-normal leadind-[140%]">Three
+                        <p class="text-[14px] lg:text-[18px] text-[#FCFEFD] font-inter font-normal leadind-[140%]">Three
                             simple steps to start earning with Monetumo.</p>
                     </div>
                 </div>
@@ -609,9 +634,10 @@
             <div class="px-4 md:px-5 xl:max-w-[1240px] mx-auto flex flex-col">
                 <div
                     class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-[36px] rounded-xl flex flex-col justify-center text-center items-center gap-4 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500  w-full">
-                    <h2 class="md:text-[42px] text-[28px] leading-tight font-bold font-avenir">Ready to Maximize Your Ad Revenue?</h2>
-                    <p class="text-lg">Start your 30-day free trial today — no credit card required.</p>
-                    <div class="hidden lg:flex lg:items-center lg:gap-4 w-full max-w-[660px] mx-auto">
+                    <h2 class="md:text-[42px] text-[28px] leading-tight font-bold ">Ready to Maximize Your Ad Revenue?
+                    </h2>
+                    <p class="text-sm md:text-lg font-inter">Start your 30-day free trial today — no credit card required.</p>
+                    <div class="flex flex-col lg:flex-row items-center gap-4 w-full max-w-[660px] mx-auto pt-1">
                         <a href="#"
                             class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg gap-2 text-[#132D46] transition-colors duration-300 border border-[#00E980] w-full inline-flex justify-center items-center ">
                             <span>Start 30-Day Free Trial</span> <span><img loading="lazy"
@@ -751,6 +777,32 @@
 
 
     <!-- Script  -->
+    <script>
+        // Dropdown toggler for Features menu
+        document.querySelectorAll('.dropdown-toggle').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const dropdown = btn.parentElement.querySelector('.dropDownItem');
+                const isOpen = dropdown.classList.contains('block');
+                // Close all dropdowns first
+                document.querySelectorAll('.dropDownItem').forEach(function (d) {
+                    d.classList.add('hidden');
+                    d.classList.remove('block');
+                });
+                // Toggle current dropdown
+                if (!isOpen) {
+                    dropdown.classList.remove('hidden');
+                    dropdown.classList.add('block');
+                    btn.setAttribute('aria-expanded', 'true');
+                } else {
+                    dropdown.classList.add('hidden');
+                    dropdown.classList.remove('block');
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+    </script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -763,7 +815,7 @@
         var options = {
             series: [{
                 name: 'Revenue Share',
-                data: [19.5, 15, 14, 13, 12, 11, 10, 9, 8, 7.5]
+                data: [20, 20, 20, 15, 10, 8, 0]
             }],
             chart: {
                 type: 'area',
@@ -828,7 +880,7 @@
             },
             yaxis: {
                 min: 0,
-                max: 25,
+                max: 20,
                 tickAmount: 4,
                 labels: {
                     formatter: function (value) {
@@ -849,7 +901,7 @@
                         return val + "%"
                     }
                 }
-            }
+            },
         };
 
         var chart = new ApexCharts(document.querySelector("#revenueShareChart"), options);
